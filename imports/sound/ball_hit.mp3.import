@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ball_hit.mp3-a36da3d95c8f86e2f83c9ac384ea2ec2.mp3str"
+
+[deps]
+
+source_file="res://imports/sound/ball_hit.mp3"
+dest_files=[ "res://.import/ball_hit.mp3-a36da3d95c8f86e2f83c9ac384ea2ec2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

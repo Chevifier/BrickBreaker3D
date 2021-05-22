@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Arcade-Puzzler.mp3-2eba98f454d467b871c0926b551a88cc.mp3str"
+
+[deps]
+
+source_file="res://Arcade-Puzzler.mp3"
+dest_files=[ "res://.import/Arcade-Puzzler.mp3-2eba98f454d467b871c0926b551a88cc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

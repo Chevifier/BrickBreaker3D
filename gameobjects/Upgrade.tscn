@@ -1,0 +1,34 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Upgrade.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://imports/retract.png" type="Texture" id=3]
+[ext_resource path="res://imports/expand.png" type="Texture" id=4]
+[ext_resource path="res://imports/weapon.png" type="Texture" id=5]
+[ext_resource path="res://imports/double_ball.png" type="Texture" id=6]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.516716
+
+[sub_resource type="SphereMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+params_cull_mode = 1
+albedo_color = Color( 1, 1, 1, 0 )
+
+[node name="Upgrade" type="Area"]
+script = ExtResource( 1 )
+upgrade_icons = [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ) ]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 2.18315, 0, 0, 0, 2.18315, 0, 0, 0, 2.18315, 0, 0, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Upgrade_body_entered"]
