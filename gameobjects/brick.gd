@@ -2,12 +2,14 @@ extends StaticBody
 
 export(PackedScene) var upgrade_scene
 onready var brick_mesh = $brick
-
+export var pre_gen_brick_for_imission = false
 
 var upgrade = GameManager.Upgrade.NONE
 func _ready():
 	randomize()
 	add_to_group("bricks")
+	if pre_gen_brick_for_imission:
+		$AnimationPlayer.play("destroy")
 	#debug_get_upgrade()
 	generate_upgrade_chance()
 
@@ -37,6 +39,8 @@ func remove_brick():
 		upgde.type = upgrade
 		upgde.global_transform.origin = global_transform.origin
 	#drop upgrade
+	if pre_gen_brick_for_imission:
+		return
 	queue_free()
 	
 	

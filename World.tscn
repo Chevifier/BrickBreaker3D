@@ -178,7 +178,6 @@ camera_rot_path = NodePath("../Camera/Camera_Rot")
 
 [node name="ball" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.3467, 0 )
-mass = 1.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 6 )
@@ -199,5 +198,9 @@ brick_contain_path = NodePath("../Brick_Container")
 [node name="world_shaper" type="AnimationPlayer" parent="."]
 anims/flat = SubResource( 8 )
 anims/square = SubResource( 9 )
+
+[node name="Brick" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01239, 67.4168, 0 )
+pre_gen_brick_for_imission = true
 
 [connection signal="body_entered" from="Floor_detection" to="." method="_on_Floor_detection_body_entered"]
